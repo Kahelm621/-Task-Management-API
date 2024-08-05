@@ -5,9 +5,5 @@
       "samplingPercentage": 100
     }
   },
-  "functionTimeout": "00:05:00", // Set timeout to 5 minutes
-  "extensionBundle": {
-    "id": "Microsoft.Azure.Functions.ExtensionBundle",
-    "version": "[1.*, 2.0.0)"
-  }
+  "functionTimeout": "00:05:00"
 }

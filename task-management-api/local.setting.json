@@ -1,12 +1,7 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true", // Local development storage
-    "FUNCTIONS_WORKER_RUNTIME": "node",
-    "CosmosDBConnectionString": "AccountEndpoint=https://<your-account>.documents.azure.com:443/;AccountKey=<your-key>;",
-    "MyApiKey": "your-api-key-here"
-  },
-  "ConnectionStrings": {
-    "CosmosDB": "AccountEndpoint=https://<your-account>.documents.azure.com:443/;AccountKey=<your-key>;"
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
   }
 }
