@@ -1,11 +1,13 @@
 {
-  "name": "",
+  "name": "task-management-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task Management API using Azure Functions",
+  "main": "index.js",
   "scripts": {
-    "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "start": "func start"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "azure-functions-core-tools": "^3.0.0",
+    "mongoose": "^6.0.0"
+  }
 }
