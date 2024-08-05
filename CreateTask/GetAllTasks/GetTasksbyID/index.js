@@ -12,20 +12,18 @@ const client = new TableClient(
 );
 
 module.exports = async function (context, req) {
-  const task = req.body;
-  task.id = new Date().getTime().toString(); // Simple ID generation
-  task.completed = false;
+  const id = req.params.id;
 
   try {
-    await client.createEntity(task);
+    const task = await client.getEntity(id, id);
     context.res = {
-      status: 201,
+      status: 200,
       body: task,
     };
   } catch (error) {
     context.res = {
-      status: 500,
-      body: "Error creating task",
+      status: 404,
+      body: "Task not found",
     };
   }
 };

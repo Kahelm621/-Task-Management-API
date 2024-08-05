@@ -12,20 +12,19 @@ const client = new TableClient(
 );
 
 module.exports = async function (context, req) {
-  const task = req.body;
-  task.id = new Date().getTime().toString(); // Simple ID generation
-  task.completed = false;
-
   try {
-    await client.createEntity(task);
+    const tasks = [];
+    for await (const task of client.listEntities()) {
+      tasks.push(task);
+    }
     context.res = {
-      status: 201,
-      body: task,
+      status: 200,
+      body: tasks,
     };
   } catch (error) {
     context.res = {
       status: 500,
-      body: "Error creating task",
+      body: "Error retrieving tasks",
     };
   }
 };
