@@ -1,7 +1,7 @@
 const { TableClient, AzureNamedKeyCredential } = require("@azure/data-tables");
 
-const connectionString = process.env.AzureWebJobsStorage;
-const tableName = "tasks";
+const connectionString = process.env.AzureWebJobsStorage; // Azure Table Storage connection string
+const tableName = "tasks"; // Table name
 const client = new TableClient(
   connectionString,
   tableName,
